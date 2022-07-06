@@ -23,3 +23,7 @@ samples, guidance on mobile development, and a full API reference.
 5. 写真をdrive or photo から引っ張れるようにする(https://script.google.com/macros/s/AKfycbyy3vYSCzXjsIRUDMAf_f9Iq8oISly6xXJc-2g2vfRtdhnIaGE/exec)
 6. 5のURL変換を自動でやってくれるようにする
 7. dropboxとか？
+
+## 課題
+- 表に対応してない
+- 改行も明確に\nいれないとだめ ← ファイル読み書き時には特に問題なし？

@@ -44,7 +44,7 @@ class _MyHomePageState extends flutter.State<MyHomePage> {
   1|2
   -|-
   a|b
-  c|d
+  c|d\n
   表はだめぽ
   """;
   //String mark = "aaaa";
