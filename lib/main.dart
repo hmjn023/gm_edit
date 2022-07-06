@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' as flutter;
 
 import 'package:markdown/markdown.dart' as md;
+import 'package:flutter_markdown/flutter_markdown.dart' as flmk;
 
 void main() {
   flutter.runApp(const MyApp());
@@ -35,6 +36,17 @@ class _MyHomePageState extends flutter.State<MyHomePage> {
   int _counter = 0;
   String mark=md.markdownToHtml('Hello *Markdown*');
   String mark2=md.markdownToHtml("### this is header test");
+  String mark3="""
+  # h1
+  ## h2
+  ### h3
+  this is test
+  1|2
+  -|-
+  a|b
+  c|d
+  表はだめぽ
+  """;
   //String mark = "aaaa";
   void _incrementCounter() {
     setState(() {
@@ -52,14 +64,14 @@ class _MyHomePageState extends flutter.State<MyHomePage> {
         child: flutter.Column(
           mainAxisAlignment: flutter.MainAxisAlignment.center,
           children: <flutter.Widget>[
-            flutter.Text(
-              //'You have pushed the button this many times:',
-              mark2,
-            ),
+            flutter.Text(mark2),
+            flmk.MarkdownBody(data:mark3,),
+        /*
             flutter.Text(
               '$_counter',
               style: flutter.Theme.of(context).textTheme.headline4,
             ),
+            */
           ],
         ),
       ),
