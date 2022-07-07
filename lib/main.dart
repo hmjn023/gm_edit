@@ -14,11 +14,11 @@ class MyApp extends flutter.StatelessWidget {
   @override
   flutter.Widget build(flutter.BuildContext context) {
     return flutter.MaterialApp(
-      title: 'Flutter Demo',
+      title: 'GM Edit',
       theme: flutter.ThemeData(
         primarySwatch: flutter.Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'GM Edit'),
     );
   }
 }
@@ -33,25 +33,20 @@ class MyHomePage extends flutter.StatefulWidget {
 }
 
 class _MyHomePageState extends flutter.State<MyHomePage> {
-  int _counter = 0;
   String mark=md.markdownToHtml('Hello *Markdown*');
   String mark2=md.markdownToHtml("### this is header test");
   String mark3="""
   # h1
   ## h2
   ### h3
-  this is test
+  this is test\n
   1|2
   -|-
   a|b
   c|d\n
-  表はだめぽ
+  表も行ける
   """;
-  //String mark = "aaaa";
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  void save() {
   }
 
   @override
@@ -66,19 +61,13 @@ class _MyHomePageState extends flutter.State<MyHomePage> {
           children: <flutter.Widget>[
             flutter.Text(mark2),
             flmk.MarkdownBody(data:mark3,),
-        /*
-            flutter.Text(
-              '$_counter',
-              style: flutter.Theme.of(context).textTheme.headline4,
-            ),
-            */
           ],
         ),
       ),
       floatingActionButton: flutter.FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const flutter.Icon(flutter.Icons.add),
+        onPressed: save,
+        tooltip: 'save',
+        child: const flutter.Icon(flutter.Icons.save),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
