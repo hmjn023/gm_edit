@@ -47,6 +47,7 @@ class _MyHomePageState extends flutter.State<MyHomePage> {
   Hello *Markdown*\n
   Hello *Markdown*\n
   Hello *Markdown*\n
+  \$ aaaa \$
   ![](https://i.imgur.com/s7Hvhaj.png)
   """;
 

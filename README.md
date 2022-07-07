@@ -28,6 +28,7 @@ samples, guidance on mobile development, and a full API reference.
 ## 課題
 - 改行に明確に\nいれないとだめ ← ファイル読み書き時には特に問題なし？
 - texにhackmdと同じように対応させる場合文字列のエスケープ処理が必要になりそう
+- 改行している場合別のwidgetになってるっぽいので選択が一括でない
 
 ## べんつよ
 - flutter_widgetのwidget.dartに書いてある
