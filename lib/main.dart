@@ -43,7 +43,11 @@ class _MyHomePageState extends flutter.State<MyHomePage> {
   -|-
   a|b
   c|d\n
-  表も行ける
+  表も行ける\n
+  Hello *Markdown*\n
+  Hello *Markdown*\n
+  Hello *Markdown*\n
+  ![](https://i.imgur.com/s7Hvhaj.png)
   """;
 
   void save() {
@@ -60,7 +64,7 @@ class _MyHomePageState extends flutter.State<MyHomePage> {
           mainAxisAlignment: flutter.MainAxisAlignment.center,
           children: <flutter.Widget>[
             flutter.Text(mark2),
-            flmk.MarkdownBody(data:mark3,),
+            flmk.MarkdownBody(data:mark3,selectable: true,),
           ],
         ),
       ),
