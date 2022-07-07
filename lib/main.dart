@@ -10,7 +10,6 @@ void main() {
 class MyApp extends flutter.StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   flutter.Widget build(flutter.BuildContext context) {
     return flutter.MaterialApp(
@@ -46,6 +45,7 @@ class _MyHomePageState extends flutter.State<MyHomePage> {
   c|d\n
   表も行ける
   """;
+
   void save() {
   }
 
