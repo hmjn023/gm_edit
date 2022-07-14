@@ -33,9 +33,9 @@ class MyHomePage extends flutter.StatefulWidget {
 }
 
 class _MyHomePageState extends flutter.State<MyHomePage> {
-  String mark=md.markdownToHtml('Hello *Markdown*');
-  String mark2=md.markdownToHtml("### this is header test");
-  String mark3="""
+  String mark = md.markdownToHtml('Hello *Markdown*');
+  String mark2 = md.markdownToHtml("### this is header test");
+  String mark3 = """
   # h1
   ## h2
   ### h3
@@ -46,8 +46,7 @@ class _MyHomePageState extends flutter.State<MyHomePage> {
   c|d\n
   表も行ける
   """;
-  void save() {
-  }
+  void save() {}
 
   @override
   flutter.Widget build(flutter.BuildContext context) {
@@ -55,15 +54,29 @@ class _MyHomePageState extends flutter.State<MyHomePage> {
       appBar: flutter.AppBar(
         title: flutter.Text(widget.title),
       ),
-      body: flutter.Center(
+      body: flutter.Row(children: [
+        flutter.Expanded(flex: 1, child: flmk.Markdown(data: mark3)),
+        flutter.Expanded(
+            flex: 1,
+            child: flutter.TextField(
+                maxLines: null,
+                onChanged: (text) => setState(() {
+                      mark3 = text;
+                    }),
+                decoration: flutter.InputDecoration(hintText: '# Header')))
+      ])
+      /*flutter.Center(
         child: flutter.Column(
           mainAxisAlignment: flutter.MainAxisAlignment.center,
           children: <flutter.Widget>[
             flutter.Text(mark2),
-            flmk.MarkdownBody(data:mark3,),
+            flmk.Markdown(
+              data: mark3,
+            ),
           ],
         ),
-      ),
+      )*/
+      ,
       floatingActionButton: flutter.FloatingActionButton(
         onPressed: save,
         tooltip: 'save',
